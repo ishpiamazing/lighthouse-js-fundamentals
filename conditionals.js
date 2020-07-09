@@ -31,3 +31,12 @@ if(isCitizen && age>18)
   console.log("You are aligible to vote.");
 }
 
+
+// let start=3;
+// while(start<=30){
+//   console.log(start);
+//   start=start+3;
+// }
+
+
+
