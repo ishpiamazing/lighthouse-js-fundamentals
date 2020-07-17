@@ -192,56 +192,91 @@
 // console.log(howManyHundreds(99), "=?", 0);
 // console.log(howManyHundreds(0), "=?", 0);
 
-const calculateRectangleArea = function(length, width)
-{
-  let rectangle = 0 ;
-  if(length < 0 || width < 0)
-  {
-    rectangle = undefined;
-  }
-  else
-  {
-    rectangle = length * width;
+// const calculateRectangleArea = function(length, width)
+// {
+//   let rectangle = 0 ;
+//   if(length < 0 || width < 0)
+//   {
+//     rectangle = undefined;
+//   }
+//   else
+//   {
+//     rectangle = length * width;
 
+//   }
+//   return rectangle;
+// }
+// const calculateTriangleArea = function (base, height)
+// {
+//   let triangle = 0;
+//   if(base < 0 || height < 0)
+//   {
+//     triangle = undefined;
+//   }
+//   else
+//   {
+//     triangle = base * height / 2;
+
+//   }
+//   return triangle;
+// }
+// const calculateCircleArea = function (radius)
+// {
+//   let circle = 0;
+//   if(radius < 0)
+//   {
+//     circle = undefined;
+//   }
+//   else
+//   {
+//     circle = Math.PI* (radius * radius);
+//   }
+//   return circle;
+// }
+
+// console.log(calculateRectangleArea(10, 5));     // should print 50
+// console.log(calculateRectangleArea(1.5, 2.5));  // should print 3.75
+// console.log(calculateRectangleArea(10, -5));    // should print undefined
+
+// console.log(calculateTriangleArea(10, 5)); // should print 25
+// console.log(calculateTriangleArea(3, 2.5)); // should print 3.75
+// console.log(calculateTriangleArea(10, -5)); // should print undefined
+
+// console.log(calculateCircleArea(10)); // should print 314.159...
+// console.log(calculateCircleArea(3.5)); // should print 38.484...
+// console.log(calculateCircleArea(-1)); // should print undefined
+
+
+
+const carPassing = function(cars,speed)
+  {
+  const car = {
+    time : Date.now(),
+    speed : speed
   }
-  return rectangle;
+ 
+  
+  if(speed > 0)
+  
+    cars.push(car);
+  return cars;
 }
-const calculateTriangleArea = function (base, height)
-{
-  let triangle = 0;
-  if(base < 0 || height < 0)
+const cars = [
   {
-    triangle = undefined;
-  }
-  else
+    time: 1568329654807,
+    speed: 40
+  },
   {
-    triangle = base * height / 2;
-
-  }
-  return triangle;
-}
-const calculateCircleArea = function (radius)
-{
-  let circle = 0;
-  if(radius < 0)
+    time: 1568329821632,
+    speed: 42
+  },
   {
-    circle = undefined;
+    time: 1568331115463,
+    speed: 35
   }
-  else
-  {
-    circle = Math.PI* (radius * radius);
-  }
-  return circle;
-}
 
-console.log(calculateRectangleArea(10, 5));     // should print 50
-console.log(calculateRectangleArea(1.5, 2.5));  // should print 3.75
-console.log(calculateRectangleArea(10, -5));    // should print undefined
+]
 
-console.log(calculateTriangleArea(10, 5)); // should print 25
-console.log(calculateTriangleArea(3, 2.5)); // should print 3.75
-console.log(calculateTriangleArea(10, -5)); // should print undefined
+const speed = 38
 
-console.log(calculateCircleArea(10)); // should print 314.159...
-console.log(calculateCircleArea(3.5)); // should print 38.484...
-console.log(calculateCircleArea(-1)); // should print undefined
+console.log(carPassing(cars, speed));
